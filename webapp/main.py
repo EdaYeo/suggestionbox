@@ -54,14 +54,15 @@ def class_submit():
     problem = request.form.get('problem')
     suggestion = request.form.get('suggestion')
     message = "Thank you for your suggestion."
+    current_date = datetime.date.today()
     fout = open("INFO_CLASS.txt", "a")
-    fout.write(username + "\n" + email + "\n" + school_class + "\n" + problem + "\n" + suggestion + "\n")
+    fout.write(username + "\n" + email + "\n" + school_class + "\n" + problem + "\n" + suggestion + "\n" + str(current_date) + "\n")
     fout.close()
     fin = open("INFO_CLASS.txt", "r")
     lines = fin.readlines()
     fin.close()
     
-    return render_template('class_submit.html', message=message, username=username, email=email, school_class=school_class, problem=problem, suggestion=suggestion, lines=lines)
+    return render_template('class_submit.html', message=message, username=username, email=email, school_class=school_class, problem=problem, suggestion=suggestion, current_date=current_date, lines=lines)
 
 @app.route('/class_view', methods=['GET'])
 def class_view():
@@ -70,10 +71,10 @@ def class_view():
   fin.close()
   x = 0
   submissions = {}
-  for i in range(0, int(len(lines)/5)):
-    sub1 = [lines[x][:-1], lines[x+1][:-1], lines[x+2][:-1], lines[x+3][:-1], lines[x+4][:-1]]
+  for i in range(0, int(len(lines)/6)):
+    sub1 = [lines[x][:-1], lines[x+1][:-1], lines[x+2][:-1], lines[x+3][:-1], lines[x+4][:-1], lines[x+5][:-1]]
     submissions[i] = sub1
-    x += 5
+    x += 6
   return render_template('class_view.html', sub1=sub1, submissions=submissions,lines=lines)
 
 
@@ -88,14 +89,15 @@ def facilities_submit():
     problem = request.form.get('problem')
     suggestion = request.form.get('suggestion')
     message = "Thank you for your suggestion."
+    current_date = datetime.date.today()
     fout = open("INFO_FACIL.txt", "a")
-    fout.write(username + "\n" + email + "\n" + school_class + "\n" + problem + "\n" + suggestion + "\n")
+    fout.write(username + "\n" + email + "\n" + school_class + "\n" + problem + "\n" + suggestion + "\n" + str(current_date) + "\n")
     fout.close()
     fin = open("INFO_FACIL.txt", "r")
     lines = fin.readlines()
     fin.close()
     
-    return render_template('facilities_submit.html', message=message, username=username, email=email, school_class=school_class, problem=problem, suggestion=suggestion, lines=lines)
+    return render_template('facilities_submit.html', message=message, username=username, email=email, school_class=school_class, problem=problem, suggestion=suggestion, current_date=current_date, lines=lines)
 
 @app.route('/facilities_view', methods=['GET'])
 def facilities_view():
@@ -104,10 +106,10 @@ def facilities_view():
   fin.close()
   x = 0
   submissions = {}
-  for i in range(0, int(len(lines)/5)):
-    sub1 = [lines[x][:-1], lines[x+1][:-1], lines[x+2][:-1], lines[x+3][:-1], lines[x+4][:-1]]
+  for i in range(0, int(len(lines)/6)):
+    sub1 = [lines[x][:-1], lines[x+1][:-1], lines[x+2][:-1], lines[x+3][:-1], lines[x+4][:-1], lines[x+5][:-1]]
     submissions[i] = sub1
-    x += 5
+    x += 6
   return render_template('facilities_view.html', sub1=sub1, submissions=submissions,lines=lines)
 
 @app.route('/others_submit', methods=['GET', 'POST'])
@@ -121,14 +123,15 @@ def others_submit():
     problem = request.form.get('problem')
     suggestion = request.form.get('suggestion')
     message = "Thank you for your suggestion."
+    current_date = datetime.date.today()
     fout = open("INFO_OTHERS.txt", "a")
-    fout.write(username + "\n" + email + "\n" + school_class + "\n" + problem + "\n" + suggestion + "\n")
+    fout.write(username + "\n" + email + "\n" + school_class + "\n" + problem + "\n" + suggestion + "\n" + str(current_date) + "\n")
     fout.close()
     fin = open("INFO_OTHERS.txt", "r")
     lines = fin.readlines()
     fin.close()
     
-    return render_template('others_submit.html', message=message, username=username, email=email, school_class=school_class, problem=problem, suggestion=suggestion, lines=lines)
+    return render_template('others_submit.html', message=message, username=username, email=email, school_class=school_class, problem=problem, suggestion=suggestion, current_date=current_date, lines=lines)
 
 @app.route('/others_view', methods=['GET'])
 def others_view():
@@ -137,10 +140,10 @@ def others_view():
   fin.close()
   x = 0
   submissions = {}
-  for i in range(0, int(len(lines)/5)):
-    sub1 = [lines[x][:-1], lines[x+1][:-1], lines[x+2][:-1], lines[x+3][:-1], lines[x+4][:-1]]
+  for i in range(0, int(len(lines)/6)):
+    sub1 = [lines[x][:-1], lines[x+1][:-1], lines[x+2][:-1], lines[x+3][:-1], lines[x+4][:-1], lines[x+5][:-1]]
     submissions[i] = sub1
-    x += 5
+    x += 6
   return render_template('others_view.html', sub1=sub1, submissions=submissions,lines=lines)
 
 if __name__ == '__main__':
