@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+    <h1 class="title">For problems regarding CCAs</h1><br />
+		<form class="data" action="/cca_submit" method="POST">
+      <label>Username: </label> 
+      <input type="text" placeholder="Enter username" name="username" required /><br />
+      <label>Email(this will not be displayed): </label>
+      <input type ="email" placeholder="Enter email" name ="email" required /><br />
+      <label>Class(optional): </label> 
+      <input type="text" placeholder="Enter class" name="school_class" /><br />
+      <label>Problem: </label> 
+      <input type="text" placeholder="Enter problem" name="problem" required /></br>
+      <label>Suggestion: </label> 
+      <input type="text" placeholder="Enter suggestion" name="suggestion" required /><br />
+      <input id="submit" type="submit" value="Submit your suggestion"/><br />
+		</form>
+
+    <hr />
+    {{ message }}<br />
+
+    <div class="choices">
+      <a href="/" target="_self">Back to home</a>
+    </div>
+
+	</body>
+</html>
+
+
