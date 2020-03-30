@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1 class="title">Others</h1>
+    {% for i in submissions %}
+    <div id="info"><label><strong>{{ submissions[i][0] }} {{ submissions[i][2] }}</strong></label><br />
+    <label><strong>Problem: </strong></label>{{ submissions[i][3] }}<br />
+    <label><strong>Suggestion: </strong></label><br /> {{ submissions[i][4] }} <br />
+    <label>{{ submissions[i][5] }}</label> <br />
+    </div>
+    {% endfor %}
+
+  </body>
+</html>
