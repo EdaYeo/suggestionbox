@@ -1,0 +1,102 @@
+body {
+  background-color: aliceblue;
+}
+
+.title {
+  background-color: red;
+  color: white;
+  margin: 50px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.title p{
+  font-style: italic;
+}
+
+
+.categories {
+  background-color: darkblue;
+  color: white;
+  margin: 50px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.categories a{
+  color: white;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.choices {
+  background-color: darkblue;
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.choices a:link, a:visited{
+  background-color: darkblue;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+  display: inline-block
+}
+
+.choices a:hover, a:active {
+  background-color: rgb(0, 0, 97);
+}
+
+
+.data {
+  background-color: darkblue;
+}
+
+.data label{
+  color: white;
+  text-align: left;
+  float: left;
+  width: 30%;
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.data input{
+  background-color: white;
+  margin: 20px;
+  padding: 10px;
+  font-size: 15px;
+  width: 55%;
+}
+
+#submit {
+  margin: 10px;
+  padding: 10px;
+  font-size: 15px;
+  width: 20%;
+}
+
+#info {
+  background-color: darkblue;
+  color: white;
+  margin: 50px;
+  padding: 20px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+#info label{
+  font-size: 18px;
+}
+
+
