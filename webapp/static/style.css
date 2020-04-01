@@ -56,6 +56,11 @@ body {
   background-color: rgb(0, 0, 97);
 }
 
+#egg {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
 
 .data {
   background-color: darkblue;
@@ -98,5 +103,4 @@ body {
 #info label{
   font-size: 18px;
 }
-
 
