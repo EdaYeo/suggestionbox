@@ -36,10 +36,14 @@ def cca_view():
   fin.close()
   x = 0
   submissions = {}
-  for i in range(0, int(len(lines)/6)):
-    sub1 = [lines[x][:-1], lines[x+1][:-1], lines[x+2][:-1], lines[x+3][:-1], lines[x+4][:-1], lines[x+5][:-1]]
-    submissions[i] = sub1
-    x += 6
+  if lines != None:
+    for i in range(0, int(len(lines)/6)):
+      sub1 = [lines[x][:-1], lines[x+1][:-1], lines[x+2][:-1], lines[x+3][:-1], lines[x+4][:-1], lines[x+5][:-1]]
+      submissions[i] = sub1
+      x += 6
+  else:
+    sub1 = []
+    continue
   return render_template('cca_view.html', sub1=sub1, submissions=submissions,lines=lines)
 
 
