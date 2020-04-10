@@ -7,6 +7,7 @@
   </head>
   <body>
     <h1 class="title">CCA</h1>
+    {% if submissions != None %}
     {% for i in submissions %}
     <div id="info"><label><strong>{{ submissions[i][0] }} {{ submissions[i][2] }}</strong></label><br />
     <label><strong>Problem: </strong></label>{{ submissions[i][3] }}<br />
@@ -14,6 +15,9 @@
     <label>{{ submissions[i][5] }}</label> <br />
     </div>
     {% endfor %}
+    {% else %}
+    <p></p>
+    {% endif %}
 
   </body>
 </html>
